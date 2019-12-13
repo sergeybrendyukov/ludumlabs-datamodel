@@ -1,12 +1,12 @@
 {
   "name": "ludumlabs-datamodel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ludum Labs: Data Model",
   "repository": {
     "type": "git",
     "url": "https://github.com/sergeybrendyukov/ludumlabs-datamodel.git"
   },
-  "private": true,
+  "private": false,
   "keywords": [
     "Ludum Labs",
     "typescript"
@@ -36,7 +36,7 @@
     "@mojotech/json-type-validation": "^3.1.0"
   },
   "devDependencies": {
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.3"
+    "tslint": "~5.8.0",
+    "typescript": "!3.3.1"
   }
 }
