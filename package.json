@@ -29,14 +29,13 @@
   "module": "index.ts",
   "types": "index.ts",
   "scripts": {
-    "build": "tsc",
-    "install": "tsc"
+    "build": "tsc"
   },
   "dependencies": {
     "@mojotech/json-type-validation": "^3.1.0"
   },
   "devDependencies": {
-    "tslint": "~5.8.0",
-    "typescript": "~3.3.1"
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
   }
 }
