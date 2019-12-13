@@ -1,6 +1,6 @@
 {
   "name": "ludumlabs-datamodel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ludum Labs: Data Model",
   "repository": {
     "type": "git",
@@ -37,6 +37,6 @@
   },
   "devDependencies": {
     "tslint": "~5.8.0",
-    "typescript": "!3.3.1"
+    "typescript": "~3.3.1"
   }
 }
