@@ -38,3 +38,6 @@ typings/
 
 # next.js build output
 .next
+
+# typescript output dir
+dist/
