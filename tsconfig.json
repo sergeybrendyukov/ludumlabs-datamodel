@@ -4,10 +4,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "",
     "noUnusedLocals": false,
     "sourceMap": true
   },
-  "include": ["**/*.ts", "src/index.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
