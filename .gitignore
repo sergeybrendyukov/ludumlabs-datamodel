@@ -39,5 +39,7 @@ typings/
 # next.js build output
 .next
 
-# typescript output dir
-dist/
+# typescript generated files
+**/*.d.ts
+**/*.js
+**/*.js.map
