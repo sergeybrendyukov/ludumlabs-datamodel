@@ -29,6 +29,8 @@
   "module": "index.ts",
   "types": "index.ts",
   "scripts": {
+    "build": "tsc",
+    "install": "tsc"
   },
   "dependencies": {
     "@mojotech/json-type-validation": "^3.1.0"
