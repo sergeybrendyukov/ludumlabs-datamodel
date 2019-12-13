@@ -25,8 +25,11 @@
       "url": "https://github.com/sergeybrendyukov"
     }
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "dependencies": {
     "@mojotech/json-type-validation": "^3.1.0"
