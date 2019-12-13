@@ -22,5 +22,5 @@ export interface ISession {
     cols: number,       // Number of columns
     rows: number,       // Number of rows
 
-    clues: Array<IClue>,    // Clues
+    clues: IClue[],    // Clues
 };

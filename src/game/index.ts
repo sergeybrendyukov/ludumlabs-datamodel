@@ -83,7 +83,7 @@ export interface IGame {
     //
     // Clues
     //
-    clues: Array<IClue>,    // Clue Array
+    clues: IClue[],    // Clue Array
 
     //
     // Customization
@@ -110,7 +110,6 @@ export const gameDecoder: Decoder<IGame> = object({
 });
 
 export interface IGameSearchResult extends IGame {
-    clues: [],
 };
 
 export const gameSearchResultDecoder: Decoder<IGameSearchResult> = object({
@@ -127,7 +126,7 @@ export const gameSearchResultDecoder: Decoder<IGameSearchResult> = object({
     comments: number(),
     created: number(),
     edited: number(),
-    clues: constant([]),
+    clues: array<IClue>(clueDecoder),
 });
 
 
