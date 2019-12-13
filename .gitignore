@@ -38,8 +38,3 @@ typings/
 
 # next.js build output
 .next
-
-# typescript generated files
-**/*.d.ts
-**/*.js
-**/*.js.map
