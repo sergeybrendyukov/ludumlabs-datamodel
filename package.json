@@ -26,7 +26,8 @@
     }
   ],
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
