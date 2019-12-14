@@ -6,7 +6,8 @@
     "declaration": true,
     "outDir": "",
     "noUnusedLocals": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "removeComments": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
