@@ -35,6 +35,7 @@ export interface IGameSearchResult extends IGame {
     clues: [IClue, IClue, IClue];
 }
 export declare const gameSearchResultDecoder: Decoder<IGameSearchResult>;
+export declare const extractSearchResultFromGame: (game: IGame) => IGameSearchResult;
 export interface IGameSearchRequest extends IApiRequest {
     title?: string;
     subtitle?: string;
