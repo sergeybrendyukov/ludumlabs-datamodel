@@ -10,7 +10,7 @@
 
 import {
     Decoder,
-    object, string, optional, number, boolean, array, constant,
+    object, string, optional, number, array, tuple,
 } from '@mojotech/json-type-validation';
 
 import { IApiRequest, IApiResponseData, INumberRange, numberRangeDecoder } from '..';
@@ -79,7 +79,6 @@ export interface IGame {
     created: number,    // Created timestamp
     edited: number,     // Last edited timestamp
 
-
     //
     // Clues
     //
@@ -110,6 +109,7 @@ export const gameDecoder: Decoder<IGame> = object({
 });
 
 export interface IGameSearchResult extends IGame {
+    clues: [IClue, IClue, IClue],
 };
 
 export const gameSearchResultDecoder: Decoder<IGameSearchResult> = object({
@@ -126,7 +126,7 @@ export const gameSearchResultDecoder: Decoder<IGameSearchResult> = object({
     comments: number(),
     created: number(),
     edited: number(),
-    clues: array<IClue>(clueDecoder),
+    clues: tuple([clueDecoder, clueDecoder, clueDecoder]),
 });
 
 
