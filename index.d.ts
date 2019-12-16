@@ -1,7 +1,3 @@
-/**
- * index.ts: Main entry point
- *
- */
 import { Decoder } from "@mojotech/json-type-validation";
 export declare enum EErrorCode {
     ERROR_UNKNOWN = "ERROR_UNKNOWN",

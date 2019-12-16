@@ -1,19 +1,11 @@
 "use strict";
-/**
- * index.ts: Activity interface
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-//
-// Data model
-//
 var EActivityType;
 (function (EActivityType) {
     EActivityType[EActivityType["ACTIVITY_PRIMARY"] = 100] = "ACTIVITY_PRIMARY";
     EActivityType[EActivityType["ACTIVITY_AUTH"] = 200] = "ACTIVITY_AUTH";
     EActivityType[EActivityType["ACTIVITY_USER"] = 300] = "ACTIVITY_USER";
     EActivityType[EActivityType["ACTIVITY_NOTIF"] = 400] = "ACTIVITY_NOTIF";
-    // REF: No activitie types for notifs
     EActivityType[EActivityType["ACTIVITY_WATCH"] = 500] = "ACTIVITY_WATCH";
     EActivityType[EActivityType["ACTIVITY_GAME"] = 600] = "ACTIVITY_GAME";
     EActivityType[EActivityType["ACTIVITY_SESSION"] = 700] = "ACTIVITY_SESSION";

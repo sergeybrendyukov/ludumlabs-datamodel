@@ -1,7 +1,3 @@
-/**
- * index.ts: User interface
- *
- */
 import { Decoder } from '@mojotech/json-type-validation';
 import { IApiRequest } from '..';
 export declare enum EUserRole {

@@ -1,7 +1,3 @@
-/**
- * index.ts: Activity interface
- *
- */
 export declare enum EActivityType {
     ACTIVITY_PRIMARY = 100,
     ACTIVITY_AUTH = 200,

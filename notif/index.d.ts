@@ -1,7 +1,3 @@
-/**
- * index.ts: Notif interface
- *
- */
 export declare enum ENotifType {
     NOTIF_AUTH = 100,
     NOTIF_AUTH_MALATTEMPT = 101,

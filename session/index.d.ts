@@ -1,7 +1,3 @@
-/**
- * index.ts: Session interface
- *
- */
 import { IClue } from '../game';
 export interface ISession {
     id: string;

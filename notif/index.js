@@ -1,12 +1,5 @@
 "use strict";
-/**
- * index.ts: Notif interface
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-//
-// Data model
-//
 var ENotifType;
 (function (ENotifType) {
     ENotifType[ENotifType["NOTIF_AUTH"] = 100] = "NOTIF_AUTH";

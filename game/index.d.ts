@@ -1,7 +1,3 @@
-/**
- * index.ts: Game interface
- *
- */
 import { Decoder } from '@mojotech/json-type-validation';
 import { IApiRequest, INumberRange } from '..';
 export interface IClue {
@@ -36,6 +32,7 @@ export interface IGame {
 }
 export declare const gameDecoder: Decoder<IGame>;
 export interface IGameSearchResult extends IGame {
+    clues: [IClue, IClue, IClue];
 }
 export declare const gameSearchResultDecoder: Decoder<IGameSearchResult>;
 export interface IGameSearchRequest extends IApiRequest {

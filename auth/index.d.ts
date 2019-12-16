@@ -1,7 +1,3 @@
-/**
- * index.ts: Auth interface
- *
- */
 import { Decoder } from '@mojotech/json-type-validation';
 import { IApiRequest } from '..';
 export interface ISignUpRequest extends IApiRequest {

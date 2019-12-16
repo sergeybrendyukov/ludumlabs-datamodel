@@ -1,12 +1,5 @@
 "use strict";
-/**
- * index.ts: Game interface
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-//
-// Imports
-//
 var json_type_validation_1 = require("@mojotech/json-type-validation");
 var __1 = require("..");
 ;
@@ -55,7 +48,7 @@ exports.gameSearchResultDecoder = json_type_validation_1.object({
     comments: json_type_validation_1.number(),
     created: json_type_validation_1.number(),
     edited: json_type_validation_1.number(),
-    clues: json_type_validation_1.array(exports.clueDecoder),
+    clues: json_type_validation_1.tuple([exports.clueDecoder, exports.clueDecoder, exports.clueDecoder]),
 });
 ;
 exports.gameSearchRequestDecoder = json_type_validation_1.object({

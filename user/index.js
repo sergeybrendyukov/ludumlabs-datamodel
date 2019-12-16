@@ -1,16 +1,6 @@
 "use strict";
-/**
- * index.ts: User interface
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-//
-// Imports
-//
 var json_type_validation_1 = require("@mojotech/json-type-validation");
-//
-// Data model
-//
 var EUserRole;
 (function (EUserRole) {
     EUserRole[EUserRole["USERROLE_UNKNOWN"] = 0] = "USERROLE_UNKNOWN";

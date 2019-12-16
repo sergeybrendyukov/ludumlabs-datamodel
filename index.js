@@ -1,16 +1,6 @@
 "use strict";
-/**
- * index.ts: Main entry point
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-//
-// Imports
-//
 var json_type_validation_1 = require("@mojotech/json-type-validation");
-//
-// Interfaces
-//
 var EErrorCode;
 (function (EErrorCode) {
     EErrorCode["ERROR_UNKNOWN"] = "ERROR_UNKNOWN";

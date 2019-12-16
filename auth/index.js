@@ -1,12 +1,5 @@
 "use strict";
-/**
- * index.ts: Auth interface
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-//
-// Imports
-//
 var json_type_validation_1 = require("@mojotech/json-type-validation");
 ;
 exports.signUpRequestDecoder = json_type_validation_1.object({

@@ -1,7 +1,3 @@
-/**
- * index.ts: Request interface
- *
- */
 export interface IRequest {
     id: string;
     requester: string;
