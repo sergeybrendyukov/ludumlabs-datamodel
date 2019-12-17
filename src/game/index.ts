@@ -129,16 +129,14 @@ export const gameSearchResultDecoder: Decoder<IGameSearchResult> = object({
     clues: tuple([clueDecoder, clueDecoder, clueDecoder]),
 });
 
-export const extractSearchResultFromGame = (game: IGame): IGameSearchResult => {
-    return {
-        ...game,
-        clues: [
-            game.clues[0],
-            game.clues[1],
-            game.clues[2],
-        ],
-    };
-};
+export const extractSearchResultFromGame = (game: IGame): IGameSearchResult => ({
+    ...game,
+    clues: [
+        game.clues[0],
+        game.clues[1],
+        game.clues[2],
+    ],
+});
 
 
 //
