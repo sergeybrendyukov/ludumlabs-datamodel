@@ -22,9 +22,6 @@ export interface IUser {
     requests: number;
 }
 export declare const userDecoder: Decoder<IUser>;
-export interface IUserSearchRequest extends IApiRequest {
-}
-export declare const gameSearchRequestDecoder: Decoder<IUserSearchRequest>;
 export interface IUserCreateRequest extends IApiRequest {
     id: string;
     email: string;

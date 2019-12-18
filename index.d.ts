@@ -1,4 +1,3 @@
-import { Decoder } from "@mojotech/json-type-validation";
 export declare enum EErrorCode {
     ERROR_UNKNOWN = "ERROR_UNKNOWN",
     ERROR_API_GENERAL = "ERROR_API_GENERAL",
@@ -33,8 +32,3 @@ export interface IApiErrorResponse extends IApiResponse {
     success: false;
     error: IApiError;
 }
-export interface INumberRange {
-    from?: number;
-    to?: number;
-}
-export declare const numberRangeDecoder: Decoder<INumberRange>;

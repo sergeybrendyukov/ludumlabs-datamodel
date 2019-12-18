@@ -1,5 +1,5 @@
 import { Decoder } from '@mojotech/json-type-validation';
-import { IApiRequest, INumberRange } from '..';
+import { IApiRequest } from '..';
 export interface IClue {
     question: {
         text: string;
@@ -31,27 +31,6 @@ export interface IGame {
     clues: IClue[];
 }
 export declare const gameDecoder: Decoder<IGame>;
-export interface IGameSearchResult extends IGame {
-    clues: [IClue, IClue, IClue];
-}
-export declare const gameSearchResultDecoder: Decoder<IGameSearchResult>;
-export declare const extractSearchResultFromGame: (game: IGame) => IGameSearchResult;
-export interface IGameSearchRequest extends IApiRequest {
-    title?: string;
-    subtitle?: string;
-    author?: string;
-    owner?: string;
-    category?: string;
-    stars?: INumberRange;
-    requests?: INumberRange;
-    likes?: INumberRange;
-    dislikes?: INumberRange;
-    comments?: INumberRange;
-    created?: INumberRange;
-    edited?: INumberRange;
-    clue?: string;
-}
-export declare const gameSearchRequestDecoder: Decoder<IGameSearchRequest>;
 export interface IGameCreateRequest extends IApiRequest {
     title: string;
     subtitle: string;

@@ -26,8 +26,6 @@ exports.userDecoder = json_type_validation_1.object({
     requests: json_type_validation_1.number(),
 });
 ;
-exports.gameSearchRequestDecoder = json_type_validation_1.object({});
-;
 exports.userCreateRequestDecoder = json_type_validation_1.object({
     id: json_type_validation_1.string(),
     email: json_type_validation_1.string(),
