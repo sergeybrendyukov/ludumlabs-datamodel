@@ -60,19 +60,3 @@ export interface IApiErrorResponse extends IApiResponse {
     success: false,
     error: IApiError,
 };
-
-
-
-//
-// Search filters
-//
-
-export interface INumberRange {
-    from?: number,
-    to?: number,
-};
-
-export const numberRangeDecoder: Decoder<INumberRange> = object({
-    from: optional(number()),
-    to: optional(number()),
-});

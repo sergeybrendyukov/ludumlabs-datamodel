@@ -76,14 +76,6 @@ export const userDecoder: Decoder<IUser> = object({
 // Api request
 //
 
-export interface IUserSearchRequest extends IApiRequest {
-
-};
-
-export const gameSearchRequestDecoder: Decoder<IUserSearchRequest> = object({
-
-});
-
 export interface IUserCreateRequest extends IApiRequest {
     id: string,
     email: string,

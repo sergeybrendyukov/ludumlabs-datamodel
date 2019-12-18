@@ -13,7 +13,7 @@ import {
     object, string, optional, number, array, tuple,
 } from '@mojotech/json-type-validation';
 
-import { IApiRequest, IApiResponseData, INumberRange, numberRangeDecoder } from '..';
+import { IApiRequest, IApiResponseData } from '..';
 
 
 //
@@ -108,67 +108,10 @@ export const gameDecoder: Decoder<IGame> = object({
     clues: array<IClue>(clueDecoder),
 });
 
-export interface IGameSearchResult extends IGame {
-    clues: [IClue, IClue, IClue],
-};
-
-export const gameSearchResultDecoder: Decoder<IGameSearchResult> = object({
-    id: string(),
-    title: string(),
-    subtitle: string(),
-    author: string(),
-    owner: string(),
-    category: string(),
-    stars: number(),
-    requests: number(),
-    likes: number(),
-    dislikes: number(),
-    comments: number(),
-    created: number(),
-    edited: number(),
-    clues: tuple([clueDecoder, clueDecoder, clueDecoder]),
-});
-
-export const extractSearchResultFromGame = (game: IGame): IGameSearchResult => ({
-    ...game,
-    clues: [
-        game.clues[0],
-        game.clues[1],
-        game.clues[2],
-    ],
-});
-
 
 //
 // Api request
 //
-
-export interface IGameSearchRequest extends IApiRequest {
-    title?: string,
-    subtitle?: string,
-    author?: string,
-    owner?: string,
-    category?: string,
-    stars?: INumberRange,
-    requests?: INumberRange,
-    likes?: INumberRange,
-    dislikes?: INumberRange,
-    comments?: INumberRange,
-    created?: INumberRange,
-    edited?: INumberRange,
-    clue?: string,
-};
-
-export const gameSearchRequestDecoder: Decoder<IGameSearchRequest> = object({
-    title: optional(string()),
-    subtitle: optional(string()),
-    author: optional(string()),
-    owner: optional(string()),
-    category: optional(string()),
-    stars: optional(numberRangeDecoder),
-    requests: optional(numberRangeDecoder),
-    clue: optional(string()),
-});
 
 export interface IGameCreateRequest extends IApiRequest {
     title: string,
