@@ -28,7 +28,7 @@ export interface IUserCreateRequest extends IApiRequest {
     name: string;
 }
 export declare const userCreateRequestDecoder: Decoder<IUserCreateRequest>;
-export interface IUserUpdateRequest extends IApiRequest {
+export interface IUserUpdate extends IApiRequest {
     email?: string;
     name?: string;
     role?: EUserRole;
@@ -41,5 +41,10 @@ export interface IUserUpdateRequest extends IApiRequest {
     watches?: number;
     transfers?: number;
     requests?: number;
+}
+export declare const userUpdateDecoder: Decoder<IUserUpdate>;
+export interface IUserUpdateRequest extends IApiRequest {
+    email: string;
+    name?: string;
 }
 export declare const userUpdateRequestDecoder: Decoder<IUserUpdateRequest>;

@@ -88,7 +88,7 @@ export const userCreateRequestDecoder: Decoder<IUserCreateRequest> = object({
     name: string(),
 });
 
-export interface IUserUpdateRequest extends IApiRequest {
+export interface IUserUpdate extends IApiRequest {
     email?: string,
     name?: string,
     role?: EUserRole,
@@ -103,7 +103,7 @@ export interface IUserUpdateRequest extends IApiRequest {
     requests?: number,
 };
 
-export const userUpdateRequestDecoder: Decoder<IUserUpdateRequest> = object({
+export const userUpdateDecoder: Decoder<IUserUpdate> = object({
     email: optional(string()),
     name: optional(string()),
     role: optional(number()),
@@ -116,4 +116,14 @@ export const userUpdateRequestDecoder: Decoder<IUserUpdateRequest> = object({
     watches: optional(number()),
     transfers: optional(number()),
     requests: optional(number()),
+});
+
+export interface IUserUpdateRequest extends IApiRequest {
+    email: string,
+    name?: string,
+};
+
+export const userUpdateRequestDecoder: Decoder<IUserUpdateRequest> = object({
+    email: optional(string()),
+    name: optional(string()),
 });

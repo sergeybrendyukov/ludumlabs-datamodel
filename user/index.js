@@ -32,7 +32,7 @@ exports.userCreateRequestDecoder = json_type_validation_1.object({
     name: json_type_validation_1.string(),
 });
 ;
-exports.userUpdateRequestDecoder = json_type_validation_1.object({
+exports.userUpdateDecoder = json_type_validation_1.object({
     email: json_type_validation_1.optional(json_type_validation_1.string()),
     name: json_type_validation_1.optional(json_type_validation_1.string()),
     role: json_type_validation_1.optional(json_type_validation_1.number()),
@@ -45,5 +45,10 @@ exports.userUpdateRequestDecoder = json_type_validation_1.object({
     watches: json_type_validation_1.optional(json_type_validation_1.number()),
     transfers: json_type_validation_1.optional(json_type_validation_1.number()),
     requests: json_type_validation_1.optional(json_type_validation_1.number()),
+});
+;
+exports.userUpdateRequestDecoder = json_type_validation_1.object({
+    email: json_type_validation_1.optional(json_type_validation_1.string()),
+    name: json_type_validation_1.optional(json_type_validation_1.string()),
 });
 //# sourceMappingURL=index.js.map
