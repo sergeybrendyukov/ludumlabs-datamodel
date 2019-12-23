@@ -16,20 +16,21 @@ import { Decoder, object, optional, number } from "@mojotech/json-type-validatio
 //
 
 export enum EErrorCode {
-    ERROR_UNKNOWN                   = 'ERROR_UNKNOWN',                 // Unknown Error
+    ERROR_UNKNOWN                       = 'ERROR_UNKNOWN',                     // Unknown Error
 
-    ERROR_API_GENERAL               = 'ERROR_API_GENERAL',             // General Error
-    ERROR_API_GENERAL_FAILURE       = 'ERROR_API_GENERAL_FAILURE',      // API General Failure
-    ERROR_API_GENERAL_BADREQUEST    = 'ERROR_API_GENERAL_BADREQUEST',   // API Bad Request
-    ERROR_API_GENERAL_DECODEFAIL    = 'ERROR_API_GENERAL_DECODEFAIL',   // Decoder failure
+    ERROR_API_GENERAL                   = 'ERROR_API_GENERAL',                 // General Error
+    ERROR_API_GENERAL_FAILURE           = 'ERROR_API_GENERAL_FAILURE',          // API General Failure
+    ERROR_API_GENERAL_BADREQUEST        = 'ERROR_API_GENERAL_BADREQUEST',       // API Bad Request
+    ERROR_API_GENERAL_DECODEFAIL        = 'ERROR_API_GENERAL_DECODEFAIL',       // Decoder failure
 
-    ERROR_API_AUTH                  = 'ERROR_API_AUTH',                // Auth Error
-    ERROR_API_AUTH_NONAUTHORIZED    = 'ERROR_API_AUTH_NONAUTHORIZED',   // Non-authorized call
-    ERROR_API_AUTH_DUPLICATEID      = 'ERROR_API_AUTH_DUPLICATEID',     // Requested User ID already exists
+    ERROR_API_AUTH                      = 'ERROR_API_AUTH',                    // Auth Error
+    ERROR_API_AUTH_NONAUTHORIZED        = 'ERROR_API_AUTH_NONAUTHORIZED',       // Non-authorized call
+    ERROR_API_AUTH_DUPLICATEID          = 'ERROR_API_AUTH_DUPLICATEID',         // Requested User ID already exists
+    ERROR_API_AUTH_NOTENOUGHPRIVILEGE   = 'ERROR_API_AUTH_NOTENOUGHPRIVILEGE',  // Not enough privilegee to do this operation
 
-    ERROR_API_DB                    = 'ERROR_API_DB',                  // Database Error
-    ERROR_API_DB_NONEXISTDOC        = 'ERROR_API_DB_NONEXISTDOC',       // Non-existing document
-    ERROR_API_DB_EMPTYUPDATE        = 'ERROR_API_DB_EMPTYUPDATE',       // Empty update request
+    ERROR_API_DB                        = 'ERROR_API_DB',                      // Database Error
+    ERROR_API_DB_NONEXISTDOC            = 'ERROR_API_DB_NONEXISTDOC',           // Non-existing document
+    ERROR_API_DB_EMPTYUPDATE            = 'ERROR_API_DB_EMPTYUPDATE',           // Empty update request
 };
 
 export interface IApiError {

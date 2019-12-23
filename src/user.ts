@@ -22,9 +22,9 @@ import { IApiRequest, IApiResponseData } from '.';
 
 export enum EUserRole {
     USERROLE_UNKNOWN    = 0,
-    USERROLE_ADMIN      = 1,    // Administrator
-    USERROLE_BASIC      = 2,    // Basic User
-    USERROLE_ADVANCED   = 3,    // Advanced User
+    USERROLE_BASIC      = 1,    // Basic User
+    USERROLE_ADVANCED   = 2,    // Advanced User
+    USERROLE_ADMIN      = 3,    // Administrator
 };
 
 export interface IUser {
@@ -119,11 +119,9 @@ export const userUpdateDecoder: Decoder<IUserUpdate> = object({
 });
 
 export interface IUserUpdateRequest extends IApiRequest {
-    email: string,
     name?: string,
 };
 
 export const userUpdateRequestDecoder: Decoder<IUserUpdateRequest> = object({
-    email: optional(string()),
     name: optional(string()),
 });

@@ -4,9 +4,9 @@ var json_type_validation_1 = require("@mojotech/json-type-validation");
 var EUserRole;
 (function (EUserRole) {
     EUserRole[EUserRole["USERROLE_UNKNOWN"] = 0] = "USERROLE_UNKNOWN";
-    EUserRole[EUserRole["USERROLE_ADMIN"] = 1] = "USERROLE_ADMIN";
-    EUserRole[EUserRole["USERROLE_BASIC"] = 2] = "USERROLE_BASIC";
-    EUserRole[EUserRole["USERROLE_ADVANCED"] = 3] = "USERROLE_ADVANCED";
+    EUserRole[EUserRole["USERROLE_BASIC"] = 1] = "USERROLE_BASIC";
+    EUserRole[EUserRole["USERROLE_ADVANCED"] = 2] = "USERROLE_ADVANCED";
+    EUserRole[EUserRole["USERROLE_ADMIN"] = 3] = "USERROLE_ADMIN";
 })(EUserRole = exports.EUserRole || (exports.EUserRole = {}));
 ;
 ;
@@ -48,7 +48,6 @@ exports.userUpdateDecoder = json_type_validation_1.object({
 });
 ;
 exports.userUpdateRequestDecoder = json_type_validation_1.object({
-    email: json_type_validation_1.optional(json_type_validation_1.string()),
     name: json_type_validation_1.optional(json_type_validation_1.string()),
 });
 //# sourceMappingURL=user.js.map

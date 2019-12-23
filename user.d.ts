@@ -2,9 +2,9 @@ import { Decoder } from '@mojotech/json-type-validation';
 import { IApiRequest } from '.';
 export declare enum EUserRole {
     USERROLE_UNKNOWN = 0,
-    USERROLE_ADMIN = 1,
-    USERROLE_BASIC = 2,
-    USERROLE_ADVANCED = 3
+    USERROLE_BASIC = 1,
+    USERROLE_ADVANCED = 2,
+    USERROLE_ADMIN = 3
 }
 export interface IUser {
     id: string;
@@ -44,7 +44,6 @@ export interface IUserUpdate extends IApiRequest {
 }
 export declare const userUpdateDecoder: Decoder<IUserUpdate>;
 export interface IUserUpdateRequest extends IApiRequest {
-    email: string;
     name?: string;
 }
 export declare const userUpdateRequestDecoder: Decoder<IUserUpdateRequest>;
