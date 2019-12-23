@@ -36,14 +36,11 @@ exports.gameDecoder = json_type_validation_1.object({
 exports.gameCreateRequestDecoder = json_type_validation_1.object({
     title: json_type_validation_1.string(),
     subtitle: json_type_validation_1.string(),
-    author: json_type_validation_1.string(),
-    owner: json_type_validation_1.string(),
     category: json_type_validation_1.string(),
     clues: json_type_validation_1.array(exports.clueDecoder),
 });
 ;
-exports.gameUpdateRequestDecoder = json_type_validation_1.object({
-    id: json_type_validation_1.optional(json_type_validation_1.string()),
+exports.gameUpdateDecoder = json_type_validation_1.object({
     title: json_type_validation_1.optional(json_type_validation_1.string()),
     subtitle: json_type_validation_1.optional(json_type_validation_1.string()),
     author: json_type_validation_1.optional(json_type_validation_1.string()),
@@ -54,6 +51,13 @@ exports.gameUpdateRequestDecoder = json_type_validation_1.object({
     likes: json_type_validation_1.optional(json_type_validation_1.number()),
     dislikes: json_type_validation_1.optional(json_type_validation_1.number()),
     comments: json_type_validation_1.optional(json_type_validation_1.number()),
+    clues: json_type_validation_1.optional(json_type_validation_1.array(exports.clueDecoder)),
+});
+;
+exports.gameUpdateRequestDecoder = json_type_validation_1.object({
+    title: json_type_validation_1.optional(json_type_validation_1.string()),
+    subtitle: json_type_validation_1.optional(json_type_validation_1.string()),
+    category: json_type_validation_1.optional(json_type_validation_1.string()),
     clues: json_type_validation_1.optional(json_type_validation_1.array(exports.clueDecoder)),
 });
 //# sourceMappingURL=index.js.map

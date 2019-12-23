@@ -34,14 +34,11 @@ export declare const gameDecoder: Decoder<IGame>;
 export interface IGameCreateRequest extends IApiRequest {
     title: string;
     subtitle: string;
-    author: string;
-    owner: string;
     category: string;
     clues: Array<IClue>;
 }
 export declare const gameCreateRequestDecoder: Decoder<IGameCreateRequest>;
-export interface IGameUpdateRequest extends IApiRequest {
-    id?: string;
+export interface IGameUpdate {
     title?: string;
     subtitle?: string;
     author?: string;
@@ -52,6 +49,13 @@ export interface IGameUpdateRequest extends IApiRequest {
     likes?: number;
     dislikes?: number;
     comments?: number;
+    clues?: Array<IClue>;
+}
+export declare const gameUpdateDecoder: Decoder<IGameUpdate>;
+export interface IGameUpdateRequest extends IApiRequest {
+    title?: string;
+    subtitle?: string;
+    category?: string;
     clues?: Array<IClue>;
 }
 export declare const gameUpdateRequestDecoder: Decoder<IGameUpdateRequest>;

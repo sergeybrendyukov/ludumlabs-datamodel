@@ -116,8 +116,6 @@ export const gameDecoder: Decoder<IGame> = object({
 export interface IGameCreateRequest extends IApiRequest {
     title: string,
     subtitle: string,
-    author: string,
-    owner: string,
     category: string,
     clues: Array<IClue>,
 };
@@ -125,14 +123,11 @@ export interface IGameCreateRequest extends IApiRequest {
 export const gameCreateRequestDecoder: Decoder<IGameCreateRequest> = object({
     title: string(),
     subtitle: string(),
-    author: string(),
-    owner: string(),
     category: string(),
     clues: array(clueDecoder),
 });
 
-export interface IGameUpdateRequest extends IApiRequest {
-    id?: string,
+export interface IGameUpdate {
     title?: string,
     subtitle?: string,
     author?: string,
@@ -146,8 +141,7 @@ export interface IGameUpdateRequest extends IApiRequest {
     clues?: Array<IClue>,
 };
 
-export const gameUpdateRequestDecoder: Decoder<IGameUpdateRequest> = object({
-    id: optional(string()),
+export const gameUpdateDecoder: Decoder<IGameUpdate> = object({
     title: optional(string()),
     subtitle: optional(string()),
     author: optional(string()),
@@ -158,5 +152,19 @@ export const gameUpdateRequestDecoder: Decoder<IGameUpdateRequest> = object({
     likes: optional(number()),
     dislikes: optional(number()),
     comments: optional(number()),
+    clues: optional(array(clueDecoder)),
+});
+
+export interface IGameUpdateRequest extends IApiRequest {
+    title?: string,
+    subtitle?: string,
+    category?: string,
+    clues?: Array<IClue>,
+};
+
+export const gameUpdateRequestDecoder: Decoder<IGameUpdateRequest> = object({
+    title: optional(string()),
+    subtitle: optional(string()),
+    category: optional(string()),
     clues: optional(array(clueDecoder)),
 });
