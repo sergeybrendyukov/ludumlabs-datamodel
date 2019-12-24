@@ -15,15 +15,3 @@ import {
 
 import { IApiRequest, IApiResponseData } from '.';
 
-
-//
-// Api response
-//
-
-export interface IGlobalPreloadResponseData extends IApiResponseData {
-
-};
-
-export const globalPreloadResponseDataDecoder: Decoder<IGlobalPreloadResponseData> = object({
-
-});
