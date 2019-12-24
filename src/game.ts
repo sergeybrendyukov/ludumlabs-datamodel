@@ -10,10 +10,10 @@
 
 import {
     Decoder,
-    object, string, optional, number, array, tuple,
+    object, string, optional, number, array,
 } from '@mojotech/json-type-validation';
 
-import { IApiRequest, IApiResponseData } from '.';
+import { IApiRequest } from '.';
 
 
 //
@@ -58,11 +58,11 @@ export interface IGame {
     //
     // Primary Data
     //
-    title: string,          // Title
-    subtitle: string,       // Subtitle
-    author: string,         // Author ID
-    owner: string,          // Owner ID
-    category: string,       // Category
+    title: string,      // Title
+    subtitle: string,   // Subtitle
+    author: string,     // Author ID
+    owner: string,      // Owner ID
+    category: string,   // Category
 
     //
     // Count data
@@ -82,7 +82,7 @@ export interface IGame {
     //
     // Clues
     //
-    clues: IClue[],    // Clue Array
+    clues: IClue[],     // Clue Array
 
     //
     // Customization

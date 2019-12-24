@@ -13,5 +13,5 @@ import {
     object, string, optional, number, boolean, array,
 } from '@mojotech/json-type-validation';
 
-import { IApiRequest, IApiResponseData } from '.';
+import { IApiRequest } from '.';
 
