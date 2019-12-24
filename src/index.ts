@@ -8,7 +8,7 @@
 // Imports
 //
 
-import { Decoder, object, optional, number } from "@mojotech/json-type-validation";
+import { Decoder, object, optional, number } from '@mojotech/json-type-validation';
 
 
 //
