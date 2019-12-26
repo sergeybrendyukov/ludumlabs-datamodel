@@ -32,6 +32,7 @@ exports.gameDecoder = json_type_validation_1.object({
     comments: json_type_validation_1.number(),
     created: json_type_validation_1.number(),
     edited: json_type_validation_1.number(),
+    sessions: json_type_validation_1.number(),
 });
 ;
 exports.gameCreateRequestDecoder = json_type_validation_1.object({
@@ -55,6 +56,7 @@ exports.gameUpdateDecoder = json_type_validation_1.object({
     likes: json_type_validation_1.optional(json_type_validation_1.number()),
     dislikes: json_type_validation_1.optional(json_type_validation_1.number()),
     comments: json_type_validation_1.optional(json_type_validation_1.number()),
+    sessions: json_type_validation_1.optional(json_type_validation_1.number()),
 });
 ;
 exports.gameUpdateRequestDecoder = json_type_validation_1.object({

@@ -28,6 +28,7 @@ export interface IGame {
     likes: number;
     dislikes: number;
     comments: number;
+    sessions: number;
     created: number;
     edited: number;
 }
@@ -53,6 +54,7 @@ export interface IGameUpdate {
     likes?: number;
     dislikes?: number;
     comments?: number;
+    sessions?: number;
 }
 export declare const gameUpdateDecoder: Decoder<IGameUpdate>;
 export interface IGameUpdateRequest extends IApiRequest {

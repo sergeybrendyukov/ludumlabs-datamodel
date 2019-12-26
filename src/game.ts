@@ -74,6 +74,7 @@ export interface IGame {
     likes: number,          // Like count
     dislikes: number,       // Dislike count
     comments: number,       // Comment count
+    sessions: number,       // Sessions played
 
     // Timestamps
     created: number,        // Created timestamp
@@ -99,6 +100,7 @@ export const gameDecoder: Decoder<IGame> = object({
     comments: number(),
     created: number(),
     edited: number(),
+    sessions: number(),
 });
 
 
@@ -135,6 +137,7 @@ export interface IGameUpdate {
     likes?: number,
     dislikes?: number,
     comments?: number,
+    sessions?: number,
 };
 
 export const gameUpdateDecoder: Decoder<IGameUpdate> = object({
@@ -150,6 +153,7 @@ export const gameUpdateDecoder: Decoder<IGameUpdate> = object({
     likes: optional(number()),
     dislikes: optional(number()),
     comments: optional(number()),
+    sessions: optional(number()),
 });
 
 export interface IGameUpdateRequest extends IApiRequest {
