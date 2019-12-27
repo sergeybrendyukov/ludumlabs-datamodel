@@ -25,6 +25,7 @@ export enum EErrorCode {
 
     ERROR_API_AUTH                      = 'ERROR_API_AUTH',                    // Auth Error
     ERROR_API_AUTH_NONAUTHORIZED        = 'ERROR_API_AUTH_NONAUTHORIZED',       // Non-authorized call
+    ERROR_API_AUTH_NONVERIFIED          = 'ERROR_API_AUTH_NONVERIFIED',         // Non-verified user
     ERROR_API_AUTH_DUPLICATEID          = 'ERROR_API_AUTH_DUPLICATEID',         // Requested User ID already exists
     ERROR_API_AUTH_NOTENOUGHPRIVILEGE   = 'ERROR_API_AUTH_NOTENOUGHPRIVILEGE',  // Not enough privilegee to do this operation
     ERROR_API_AUTH_NOTENOUGHOWNERSHIP   = 'ERROR_API_AUTH_NOTENOUGHOWNERSHIP',  // Not enough ownership to view this data
