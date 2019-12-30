@@ -34,7 +34,6 @@ export interface IUser {
     // Primary Data
     //
     email: string,      // Email
-    name: string,       // Name
 
     //
     // User role data
@@ -58,7 +57,6 @@ export interface IUser {
 export const userDecoder: Decoder<IUser> = object({
     id: string(),
     email: string(),
-    name: string(),
     role: number(),
     expire: number(),
     games: number(),
@@ -79,18 +77,15 @@ export const userDecoder: Decoder<IUser> = object({
 export interface IUserCreateRequest extends IApiRequest {
     id: string,
     email: string,
-    name: string,
 };
 
 export const userCreateRequestDecoder: Decoder<IUserCreateRequest> = object({
     id: string(),
     email: string(),
-    name: string(),
 });
 
 export interface IUserUpdate extends IApiRequest {
     email?: string,
-    name?: string,
     role?: EUserRole,
     expire?: number,
     games?: number,
@@ -105,7 +100,6 @@ export interface IUserUpdate extends IApiRequest {
 
 export const userUpdateDecoder: Decoder<IUserUpdate> = object({
     email: optional(string()),
-    name: optional(string()),
     role: optional(number()),
     expire: optional(number()),
     games: optional(number()),
@@ -116,12 +110,4 @@ export const userUpdateDecoder: Decoder<IUserUpdate> = object({
     watches: optional(number()),
     transfers: optional(number()),
     requests: optional(number()),
-});
-
-export interface IUserUpdateRequest extends IApiRequest {
-    name?: string,
-};
-
-export const userUpdateRequestDecoder: Decoder<IUserUpdateRequest> = object({
-    name: optional(string()),
 });

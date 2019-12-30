@@ -9,7 +9,6 @@ export declare enum EUserRole {
 export interface IUser {
     id: string;
     email: string;
-    name: string;
     role: EUserRole;
     expire: number;
     games: number;
@@ -25,12 +24,10 @@ export declare const userDecoder: Decoder<IUser>;
 export interface IUserCreateRequest extends IApiRequest {
     id: string;
     email: string;
-    name: string;
 }
 export declare const userCreateRequestDecoder: Decoder<IUserCreateRequest>;
 export interface IUserUpdate extends IApiRequest {
     email?: string;
-    name?: string;
     role?: EUserRole;
     expire?: number;
     games?: number;
@@ -43,7 +40,3 @@ export interface IUserUpdate extends IApiRequest {
     requests?: number;
 }
 export declare const userUpdateDecoder: Decoder<IUserUpdate>;
-export interface IUserUpdateRequest extends IApiRequest {
-    name?: string;
-}
-export declare const userUpdateRequestDecoder: Decoder<IUserUpdateRequest>;
