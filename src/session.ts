@@ -51,20 +51,29 @@ export enum ESessionType {
 export interface ISession {
     id: string,             // Unique ID
 
+    // Primary
     title: string,          // Session title
 
+    // User
+    owner: string,          // Owner ID
+
+    // Metadata
     type: ESessionType,     // Session type
     game: string,           // Base Game ID
     cols: number,           // Number of columns
     rows: number,           // Number of rows
 
+    // Clues
     board: IClue[],         // Clues
     categories: string[],   // Category strings
 
+    // Players
     players: IPlayer[],     // Players
 
+    // Online
     host?: string,          // Host UID
 
+    // Timestamps
     created: number,        // Creation timestamp
     started: number,        // Session start timestamp
     finished: number,       // Session finish timestamp
@@ -73,6 +82,7 @@ export interface ISession {
 export const sessionDecoder: Decoder<ISession> = object({
     id: string(),
     title: string(),
+    owner: string(),
     type: oneOf(constant(ESessionType.SOLO), constant(ESessionType.ONLINE)),
     game: string(),
     cols: number(),
@@ -145,6 +155,7 @@ export const sessionCreateOnlineRequestDecoder: Decoder<ISessionCreateOnlineRequ
 
 export interface ISessionUpdate {
     title?: string,
+    owner?: string,
     type?: ESessionType,
     game?: string,
     cols?: number,
@@ -159,8 +170,8 @@ export interface ISessionUpdate {
 };
 
 export const sessionUpdateDecoder: Decoder<ISessionUpdate> = object({
-    id: optional(string()),
     title: optional(string()),
+    owner: optional(string()),
     type: optional(oneOf(constant(ESessionType.SOLO), constant(ESessionType.ONLINE))),
     game: optional(string()),
     cols: optional(number()),

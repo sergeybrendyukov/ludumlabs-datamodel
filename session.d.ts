@@ -18,6 +18,7 @@ export declare enum ESessionType {
 export interface ISession {
     id: string;
     title: string;
+    owner: string;
     type: ESessionType;
     game: string;
     cols: number;
@@ -52,6 +53,7 @@ export interface ISessionCreateOnlineRequest extends ISessionCreateRequest {
 export declare const sessionCreateOnlineRequestDecoder: Decoder<ISessionCreateOnlineRequest>;
 export interface ISessionUpdate {
     title?: string;
+    owner?: string;
     type?: ESessionType;
     game?: string;
     cols?: number;

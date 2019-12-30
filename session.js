@@ -22,6 +22,7 @@ var ESessionType;
 exports.sessionDecoder = json_type_validation_1.object({
     id: json_type_validation_1.string(),
     title: json_type_validation_1.string(),
+    owner: json_type_validation_1.string(),
     type: json_type_validation_1.oneOf(json_type_validation_1.constant(ESessionType.SOLO), json_type_validation_1.constant(ESessionType.ONLINE)),
     game: json_type_validation_1.string(),
     cols: json_type_validation_1.number(),
@@ -69,8 +70,8 @@ exports.sessionCreateOnlineRequestDecoder = json_type_validation_1.object({
 });
 ;
 exports.sessionUpdateDecoder = json_type_validation_1.object({
-    id: json_type_validation_1.optional(json_type_validation_1.string()),
     title: json_type_validation_1.optional(json_type_validation_1.string()),
+    owner: json_type_validation_1.optional(json_type_validation_1.string()),
     type: json_type_validation_1.optional(json_type_validation_1.oneOf(json_type_validation_1.constant(ESessionType.SOLO), json_type_validation_1.constant(ESessionType.ONLINE))),
     game: json_type_validation_1.optional(json_type_validation_1.string()),
     cols: json_type_validation_1.optional(json_type_validation_1.number()),
