@@ -28,7 +28,7 @@ export interface IPlayer {
     score: number,      // Game score
     challenged: number, // Number of challenged question
     correct: number,    // Number of correct answer
-    wrong: number,      // Number of wrong answer 
+    wrong: number,      // Number of wrong answer
 };
 
 export const playerDecoder: Decoder<IPlayer> = object({
