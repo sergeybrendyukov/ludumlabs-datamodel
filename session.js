@@ -5,8 +5,6 @@ var game_1 = require("./game");
 ;
 exports.playerDecoder = json_type_validation_1.object({
     uid: json_type_validation_1.string(),
-    name: json_type_validation_1.string(),
-    avatar: json_type_validation_1.string(),
     score: json_type_validation_1.number(),
     challenged: json_type_validation_1.number(),
     correct: json_type_validation_1.number(),

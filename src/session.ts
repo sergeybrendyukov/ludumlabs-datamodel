@@ -24,8 +24,6 @@ import { IClue, clueDecoder } from './game';
 
 export interface IPlayer {
     uid: string,        // User ID
-    name: string,       // Name
-    avatar: string,     // Avatar
 
     score: number,      // Game score
     challenged: number, // Number of challenged question
@@ -35,8 +33,6 @@ export interface IPlayer {
 
 export const playerDecoder: Decoder<IPlayer> = object({
     uid: string(),
-    name: string(),
-    avatar: string(),
     score: number(),
     challenged: number(),
     correct: number(),

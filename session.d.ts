@@ -3,8 +3,6 @@ import { IApiRequest } from '.';
 import { IClue } from './game';
 export interface IPlayer {
     uid: string;
-    name: string;
-    avatar: string;
     score: number;
     challenged: number;
     correct: number;
