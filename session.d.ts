@@ -2,11 +2,13 @@ import { Decoder } from '@mojotech/json-type-validation';
 import { IApiRequest } from '.';
 import { IClue } from './game';
 export interface IPlayer {
-    uid: string;
+    name: string;
+    avatar: string;
     score: number;
     challenged: number;
     correct: number;
     wrong: number;
+    uid: string;
 }
 export declare const playerDecoder: Decoder<IPlayer>;
 export declare enum ESessionType {

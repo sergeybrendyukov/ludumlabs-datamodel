@@ -23,20 +23,28 @@ import { IClue, clueDecoder } from './game';
 //
 
 export interface IPlayer {
-    uid: string,        // User ID
+    // Primary
+    name: string,       // Player name
+    avatar: string,     // Player avatar
 
+    // Scores
     score: number,      // Game score
     challenged: number, // Number of challenged question
     correct: number,    // Number of correct answer
     wrong: number,      // Number of wrong answer
+
+    // Online playing
+    uid: string,        // User ID
 };
 
 export const playerDecoder: Decoder<IPlayer> = object({
-    uid: string(),
+    name: string(),
+    avatar: string(),
     score: number(),
     challenged: number(),
     correct: number(),
     wrong: number(),
+    uid: string(),
 });
 
 export enum ESessionType {
