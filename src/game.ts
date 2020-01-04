@@ -35,7 +35,7 @@ export interface IClue {
         // REF: Media for answer is deprecated
     },
     timelimit: number,  // Time limit in seconds
-    category: number,   // tags ID (range 0-5)
+    category: number,   // Category ID (range 0-5)
 };
 
 export const clueDecoder: Decoder<IClue> = object({
