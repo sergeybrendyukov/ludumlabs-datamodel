@@ -36,6 +36,7 @@ export interface IClue {
     },
     timelimit: number,  // Time limit in seconds
     category: number,   // Category ID (range 0-5)
+    weight: number,     // Clue weight or difficulty
 };
 
 export const clueDecoder: Decoder<IClue> = object({
@@ -50,6 +51,7 @@ export const clueDecoder: Decoder<IClue> = object({
     }),
     timelimit: number(),
     category: number(),
+    weight: number(),
 });
 
 export interface IGame {

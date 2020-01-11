@@ -12,6 +12,7 @@ export interface IClue {
     };
     timelimit: number;
     category: number;
+    weight: number;
 }
 export declare const clueDecoder: Decoder<IClue>;
 export interface IGame {

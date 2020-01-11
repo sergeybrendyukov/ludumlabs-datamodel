@@ -14,6 +14,7 @@ exports.clueDecoder = json_type_validation_1.object({
     }),
     timelimit: json_type_validation_1.number(),
     category: json_type_validation_1.number(),
+    weight: json_type_validation_1.number(),
 });
 ;
 exports.gameDecoder = json_type_validation_1.object({
